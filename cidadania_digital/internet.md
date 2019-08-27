@@ -20,13 +20,13 @@ Vamos instalar o [Termux](https://play.google.com/store/apps/details?id=com.term
 
 Assim que instalar e abrir o Termux vai aparecer uma linha de comando. Copie para lá o seguinte comando:
 
-$ `curl https://raw.githubusercontent.com/mauro-zac/Trilha-Digital/master/m%C3%B3dulos/cidadania_digital/internet.md`
+$ `curl https://raw.githubusercontent.com/trilha-digital/master/micromodulos/cidadania_digital/internet.md`
 
 O que aconteceu? Você acessou o conteúdo desta aula em texto-plano (*raw*) diretamente do site do GitHub. O [comando curl](https://pt.wikipedia.org/wiki/Curl_(Unix)) encontrou o servidor especificado no endereço *github.com*, usando o protocolo *https* e retornou o conteúdo que está lá disponível, fisicamente salvo em um datacenter em algum lugar do mundo. Todo esse processo ocorreu em frações de segundo. 
 
 O curl baixa o conteúdo exatamente como está no servidor. No link acima, o texto *raw* é perfeitamente legível. Mas tente agora baixar uma página mais típica da internet:
 
-$ `curl https://github.com/mauro-zac/Trilha-Digital/blob/master/m%C3%B3dulos/cidadania_digital/internet.md`
+$ `curl https://github.com/trilha-digital/blob/master/micromodulos/cidadania_digital/internet.md`
 
 O mesmo texto agora chega misturado em uma "sopa de letrinhas". Essa sopa é nada mais do que o código-fonte da página *web* escrito em HTML5. É isso que um navegador de internet (browser) espera receber. Ele usa as instruções contidas nesse código para montar a página para você. Abra o mesmo endereço em um navegador para conferir.
 
@@ -34,7 +34,7 @@ O curl mostra como uma página de fato é transmitida pela internet. Dizemos que
 
 Mas o curl é capaz de mostrar outras coisas interessantes.
 
-$ `curl --head https://github.com/mauro-zac/Trilha-Digital/raw/master/m%C3%B3dulos/cidadania_digital/internet.md`
+$ `curl --head https://github.com/trilha-digital/raw/master/micromodulos/cidadania_digital/internet.md`
 
 A adição do sufixo `-head` informa o curl que você quer ver o [cabeçalho do protocolo HTTP](https://pt.wikipedia.org/wiki/Lista_de_campos_de_cabeçalho_HTTP). Esse pacote de informação é sempre parte das transações entre cliente e servidor e contém diversas instruções e declarações úteis para que a comunicação funcione e para que eventuais erros sejam corrigidos. Por exemplo, se tudo correr bem você verá em algum lugar do cabeçalho:
 
