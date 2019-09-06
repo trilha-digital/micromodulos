@@ -303,9 +303,22 @@ wiki.json
    'continent': u'North America'
 }
 ```
-#### 4) Infraestrutra e velocidade (TO DO)
+
+#### 4) Infraestrutra e medidas de desempenho
+
+Um dos aspectos mais fascinantes da intenet é que, por ser construída sobre protocolos abertos, acessíveis e conhecidos por qualquer pessoa ou organização, ela pode crescer indefinidamente e formar uma rede de conexões extremamente complexa e resistente a falhas. Os pacotes de dados podem percorrer diferentes caminhos. Se algumas rotas estiverem saturadas ou indisponíveis, o tráfego é automaticamente desviado para outros caminhos.
+
+As máquinas que fazem essa distribuição são chamadas de [roteadores](https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Como_a_internet_funciona).
+
+Na prática, a infraestrutura da internet forma uma hierarquia capilarizada, similar a uma árvore e aos sistemas respiratório e circulatório. 
+
+1. [Backbone](https://pt.wikipedia.org/wiki/Backbone)
+1. [Backhaul](https://pt.wikipedia.org/wiki/Backhaul)
+1. [Camada de acesso]()
+
+[diferenças regionais](https://www.anatel.gov.br/dados/mapeamento-de-redes)
+
 
 transmissão de dados, 
 velocidade
 latencia
-
