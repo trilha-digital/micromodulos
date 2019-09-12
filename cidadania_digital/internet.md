@@ -312,11 +312,9 @@ As máquinas que fazem essa distribuição são chamadas de [roteadores](https:/
 
 Na prática, a infraestrutura da internet forma uma hierarquia capilarizada, similar a uma árvore e aos sistemas respiratório e circulatório. 
 
-1. [Backbone](https://pt.wikipedia.org/wiki/Backbone)
-1. [Backhaul](https://pt.wikipedia.org/wiki/Backhaul)
-1. [Camada de acesso]()
-
-[diferenças regionais](https://www.anatel.gov.br/dados/mapeamento-de-redes)
+1. [Camada de acesso](https://pt.wikipedia.org/wiki/Fornecedor_de_acesso_à_internet): a rede que chega até a sua máquina, quase sempre controlada por um provedor de acesso; 
+1. [Backhaul](https://pt.wikipedia.org/wiki/Backhaul): a camada intemediária que distribui a Internet para os provedores. Precisa ter maior capacidade e por isso o [uso de fibra ótica é crescente](https://www.anatel.gov.br/dados/mapeamento-de-redes);
+1. [Backbone](https://pt.wikipedia.org/wiki/Backbone): são as conexões de grande capacidade em fibra ótica, incluindo os [cabos submarinos](https://www.tecmundo.com.br/internet/129881-veja-dentro-cabo-submarino-internet-oceanos.htm) que conectam os países. Essas conexões são controladas por grandes empresas e pelos governos.
 
 
 transmissão de dados, 
