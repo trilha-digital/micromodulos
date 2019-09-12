@@ -324,21 +324,21 @@ As operadoras vendem planos sem explicar direito o que signficam as unidades. No
 
 A capacidade, ou largura de banda, de uma conexão é a velocidade máxima que ela suporta medida em bits por segundo. Uma conexão de 1 Mbps é capaz de transmitir 1 milhão de bits por segundo. Quando se mede bits, as letras k, M, G, T, P se referem a múltiplos sucessivos de 1.000. 
 
-.1 kbps (kilo bits por segundo) = 1.000 bits por segundo (k e b minúsculos)
-.1 Mbps (mega bits por segundo) = 1.000 kbps = 1 milhão de bits por segundo
-.1 Gbps (giga bits por segundo) = 1.000 Mbps = 1 bilhão de bits por segundo
-.1 Tbps (tera bits por segundo) = 1.000 Gbps = 1 trilhão de bits por segundo
-.1 Pbps (peta bits por segundo) = 1.000 Tbps = 1 quatrilhão de bits por segundo
+- 1 kbps (kilo bits por segundo) = 1.000 bits por segundo (k e b minúsculos)
+- 1 Mbps (mega bits por segundo) = 1.000 kbps = 1 milhão de bits por segundo
+- 1 Gbps (giga bits por segundo) = 1.000 Mbps = 1 bilhão de bits por segundo
+- 1 Tbps (tera bits por segundo) = 1.000 Gbps = 1 trilhão de bits por segundo
+- 1 Pbps (peta bits por segundo) = 1.000 Tbps = 1 quatrilhão de bits por segundo
 
 Um bit é a informação digital básica, 0 ou 1. Um caracter comum, por exemplo `a`, precisa de 8 bits para ser [codificado com zeros e uns](https://pt.wikipedia.org/wiki/ASCII): `01100001`. Um caracter comum de 8 bits equivale a 1 Byte (com B maiúsculo).
 
 No caso do Bytes, as letras K, M, G, T, P se referem a múltiplos de 1.024 (2^10). O tamanho em Bytes é usado para medir o tamanho de arquivos e corresponde ao número de caracteres comuns (ASCII de 8 bits) contido no arquivo.
 
-. 1 KB = 1.024 Bytes (K maiúsculo) = 1.024x8 = 8.192 bits
-. 1 MB = 1.024 KB = 8.388.608 bits
-. 1 GB = 1.024 MB = 8.589.934.592 bits
-. 1 TB = 1.024 GB = 8.796.093.022.208 bits
-. 1 PB = 1.024 TB = 9.007.199.254.740.992 bits
+* 1 KB = 1.024 Bytes (K maiúsculo) = 1.024x8 = 8.192 bits
+* 1 MB = 1.024 KB = 8.388.608 bits
+* 1 GB = 1.024 MB = 8.589.934.592 bits
+* 1 TB = 1.024 GB = 8.796.093.022.208 bits
+* 1 PB = 1.024 TB = 9.007.199.254.740.992 bits
 
 Também é possível falar de velocidade em MBps. Nesse caso, 1 MBps seria igual a 8,388608 Mbps. Do lado inverso: 1 Mbps é igual a 0,11920928955078125 MBps. Mas medir em MBps não é o usual. A velocidade é medida normalmente em bits. 
 
@@ -369,10 +369,10 @@ Na prática dificilmente algum usa uma conexão a 100%. Primeiro porque o downlo
 Para terminar, vamos rodar um experimento em python para visualizar melhor o que uma internet de 1 mega (1 Mbps) é capaz de transmitir em 1 segundo.
 
 ```python
-> frase = "Para terminar, vamos rodar um experimento para visualizar melhor o que uma internet de 1 mega (1 Mbps) é capaz de transmitir em 1 segundo."
-> len(frase)
+frase = "Para terminar, vamos rodar um experimento para visualizar melhor o que uma internet de 1 mega (1 Mbps) é capaz de transmitir em 1 segundo."
+len(frase)
 138
-> len(frase.encode('utf-8'))
+len(frase.encode('utf-8'))
 139
 ```
 
