@@ -318,7 +318,7 @@ Na prática, a infraestrutura da internet forma uma hierarquia capilarizada, sim
 
 Agora vamos ver algumas coisas mais concreta sobre infraestrutura.
 
-###### O que significa uma internet de 1 mega?
+##### O que significa uma internet de 1 mega?
 
 As operadoras vendem planos sem explicar direito o que signficam as unidades. Normal ficar confuso. Vamos entender isso direito.
 
@@ -381,7 +381,7 @@ Essa frase tem 138 caracteres mas ocupa 139 Bytes porque o caracter "é" usa 16 
 Para gerar um texto com 1 Mbit:
 
 ```python
-# 1 Mbit = 0,11920928955078125 MB = 122.0703125 KB = 125000.0 B (multiplicações por 1024)
+# 1 Mbit = 0.11920928955078125 MB = 122.0703125 KB = 125000.0 B (multiplicações por 1024)
 multiplicador = int(125000/139)  # 899
 frase = frase * multiplicador
 len(frase.encode('utf-8')) 
