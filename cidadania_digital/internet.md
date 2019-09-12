@@ -312,11 +312,84 @@ As máquinas que fazem essa distribuição são chamadas de [roteadores](https:/
 
 Na prática, a infraestrutura da internet forma uma hierarquia capilarizada, similar a uma árvore e aos sistemas respiratório e circulatório. 
 
-1. [Camada de acesso](https://pt.wikipedia.org/wiki/Fornecedor_de_acesso_à_internet): a rede que chega até a sua máquina, quase sempre controlada por um provedor de acesso; 
+1. [Camada de acesso](https://pt.wikipedia.org/wiki/Fornecedor_de_acesso_à_internet): é a rede que chega até a sua máquina, quase sempre controlada por um provedor de acesso; 
 1. [Backhaul](https://pt.wikipedia.org/wiki/Backhaul): a camada intemediária que distribui a Internet para os provedores. Precisa ter maior capacidade e por isso o [uso de fibra ótica é crescente](https://www.anatel.gov.br/dados/mapeamento-de-redes);
 1. [Backbone](https://pt.wikipedia.org/wiki/Backbone): são as conexões de grande capacidade em fibra ótica, incluindo os [cabos submarinos](https://www.tecmundo.com.br/internet/129881-veja-dentro-cabo-submarino-internet-oceanos.htm) que conectam os países. Essas conexões são controladas por grandes empresas e pelos governos.
 
+Agora vamos ver algumas coisas mais concreta sobre infraestrutura.
 
-transmissão de dados, 
-velocidade
-latencia
+###### O que significa uma internet de 1 mega?
+
+As operadoras vendem planos sem explicar direito o que signficam as unidades. Normal ficar confuso. Vamos entender isso direito.
+
+A capacidade, ou largura de banda, de uma conexão é a velocidade máxima que ela suporta medida em bits por segundo. Uma conexão de 1 Mbps é capaz de transmitir 1 milhão de bits por segundo. Quando se mede bits, as letras k, M, G, T, P se referem a múltiplos sucessivos de 1.000. 
+
+.1 kbps (kilo bits por segundo) = 1.000 bits por segundo (k e b minúsculos)
+.1 Mbps (mega bits por segundo) = 1.000 kbps = 1 milhão de bits por segundo
+.1 Gbps (giga bits por segundo) = 1.000 Mbps = 1 bilhão de bits por segundo
+.1 Tbps (tera bits por segundo) = 1.000 Gbps = 1 trilhão de bits por segundo
+.1 Pbps (peta bits por segundo) = 1.000 Tbps = 1 quatrilhão de bits por segundo
+
+Um bit é a informação digital básica, 0 ou 1. Um caracter comum, por exemplo `a`, precisa de 8 bits para ser [codificado com zeros e uns](https://pt.wikipedia.org/wiki/ASCII): `01100001`. Um caracter comum de 8 bits equivale a 1 Byte (com B maiúsculo).
+
+No caso do Bytes, as letras K, M, G, T, P se referem a múltiplos de 1.024 (2^10). O tamanho em Bytes é usado para medir o tamanho de arquivos e corresponde ao número de caracteres comuns (ASCII de 8 bits) contido no arquivo.
+
+. 1 KB = 1.024 Bytes (K maiúsculo) = 1.024x8 = 8.192 bits
+. 1 MB = 1.024 KB = 8.388.608 bits
+. 1 GB = 1.024 MB = 8.589.934.592 bits
+. 1 TB = 1.024 GB = 8.796.093.022.208 bits
+. 1 PB = 1.024 TB = 9.007.199.254.740.992 bits
+
+Também é possível falar de velocidade em MBps. Nesse caso, 1 MBps seria igual a 8,388608 Mbps. Do lado inverso: 1 Mbps é igual a 0,11920928955078125 MBps. Mas medir em MBps não é o usual. A velocidade é medida normalmente em bits. 
+
+Uma confusão comum é que às vezes a velocidade de download de um arquivo aparece em KB/s (KBps). O valor em KBps é bem menor que a banda em kbps. 
+
+Para saber a velocidade real de sua conexão você precisa usar um serviço externo como [este](https://speedof.me).
+
+![](https://github.com/trilha-digital/micromodulos/blob/master/cidadania_digital/img/speed_example.jpg)
+
+A velocidade medida (*speed*) para download e upload aparecem corretamente em Mbps. O teste também mede o tempo médio que cada pacote enviado pelo TCP/IP leva de ponto a ponto. Esta medida se chama latência (*latency*) e vem em microsegundos, ou seja, em milésimos de segundo. Uma latência muito alta significa uma rede muito congestionada e/ou que os pacotes estão tendo que percorrer um caminho muito longo na rede até serem entregues. Uma latência ao redor de 100 ms é razoável para uma comunicação com Miami. Para um jogo on-line a latência precisa estar abaixo de 30 ms para não ser sentida pelo jogador (por isso jogos usam outros protocolos de comunicação). 
+
+Outra confusão comum: alguns planos são vendidos não pela velocidade, mas pela franquia mensal de dados. Planos na casa de gigas se referem a dados e não a velocidade (Gbps é típico de *backhaul* e não da camada de acesso).
+
+Fazendo a conta. Quanto tempo dura um plano de 5 GB com uma conexão de 1 Mbps se usada em 100%? 
+
+```python
+# 1 GB equivale a 8.589.934.592 bits
+um_GB = 8589934592
+# 8589934592bits/1000000bits/s => bits divido por bits/s gera um valor em segundos
+um_GB/1000000
+8589.934592 # segundos
+um_GB/1000000/60
+143.16557653333334 # minutos
+```
+
+Na prática dificilmente algum usa uma conexão a 100%. Primeiro porque o download de dados é feito sob demanda e é intermitente. Segundo que a velocidade da conexão é sempre menor que a velocidade máxima nominal da banda, especialmente se a infraestrutura for insuficiente ou estiver congestionada.  
+
+Para terminar, vamos rodar um experimento em python para visualizar melhor o que uma internet de 1 mega (1 Mbps) é capaz de transmitir em 1 segundo.
+
+```python
+> frase = "Para terminar, vamos rodar um experimento para visualizar melhor o que uma internet de 1 mega (1 Mbps) é capaz de transmitir em 1 segundo."
+> len(frase)
+138
+> len(frase.encode('utf-8'))
+139
+```
+
+Essa frase tem 138 caracteres mas ocupa 139 Bytes porque o caracter "é" usa 16 bits. Para codificar as línguas que usam acentuação, como a portuguesa, a tabela ASCII não é grande o suficiente. Por isso, a codificação [UTF-8](https://pt.wikipedia.org/wiki/UTF-8) é empregada como padrão internacional. 
+
+Para gerar um texto com 1 Mbit:
+
+```python
+# 1 Mbit = 0,11920928955078125 MB = 122.0703125 KB = 125000.0 B (multiplicações por 1024)
+multiplicador = int(125000/139)  # 899
+frase = frase * multiplicador
+len(frase.encode('utf-8')) 
+124961 # quase 125000 B pq arrendondamos o multiplicador
+frase
+...
+```
+
+Viu só o tamanho do texto? Esse é o volume que uma conexão com 1 Mbps é capaz de transmitir em 1 segundo. 
+
+Isso medido na camada de acesso. Quando o tráfego se concentra no backhaul e no backbone a velocidade precisa ser muito maior para dar conta do volume de tráfego. No *backhual* precisa ser da ordem de vários Gbps e no *backbone* precisa alcançar Tbps. E conforme cresce o tráfego nas redes mais infraestrutura se torna necessária.
