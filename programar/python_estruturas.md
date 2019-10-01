@@ -1,6 +1,6 @@
 # Python 
 
-> Aprender a programar é aprender a resolver problemas. *Allen Dewey*
+> Aprender a programar é aprender a resolver problemas. *Allen Downey*
 
 `Python` `40 horas-aula` `micromódulos para o 2º semestre` `1º ano`
 
