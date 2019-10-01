@@ -49,7 +49,7 @@ Os capítulos do livro estão distribuídos em 4 a 7 aulas, gerando tempo extra 
 
 ### Dicionários
 
-'6 horas-aula`
+`6 horas-aula`
 
 1. [Um dicionário é um mapeamento](https://pense-python.caravela.club/11-dicionarios/01-um-dicionario-e-um-mapeamento.html)
 1. [Um dicionário como uma coleção de contadores](https://pense-python.caravela.club/11-dicionarios/02-um-dicionario-como-uma-colecao-de-contadores.html)
@@ -62,7 +62,7 @@ Os capítulos do livro estão distribuídos em 4 a 7 aulas, gerando tempo extra 
 
 `6 horas-aula`
 
-1. [Tuplas são imutáveis])(https://pense-python.caravela.club/12-tuplas/01-tuplas-sao-imutaveis.html) + [Atribuição de tuplas](https://pense-python.caravela.club/12-tuplas/02-atribuicao-de-tuplas.html)
+1. [Tuplas são imutáveis](https://pense-python.caravela.club/12-tuplas/01-tuplas-sao-imutaveis.html) + [Atribuição de tuplas](https://pense-python.caravela.club/12-tuplas/02-atribuicao-de-tuplas.html)
 1. [Tuplas como valores de retorno](https://pense-python.caravela.club/12-tuplas/03-tuplas-como-valores-de-retorno.html) + [Tuplas com argumentos de comprimento variável](https://pense-python.caravela.club/12-tuplas/04-tuplas-com-argumentos-de-comprimento-variavel.html)
 1. [Listas e tuplas](https://pense-python.caravela.club/12-tuplas/05-listas-e-tuplas.html)
 1. [Dicionários e tuplas](https://pense-python.caravela.club/12-tuplas/06-dicionarios-e-tuplas.html)
